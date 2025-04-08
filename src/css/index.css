@@ -1,0 +1,10 @@
+*{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: white;
+}
+body{
+    background-image: url("../../resources/bg.jpg");
+    background-size: cover;
+}
