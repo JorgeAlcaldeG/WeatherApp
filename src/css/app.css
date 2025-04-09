@@ -24,5 +24,5 @@
     -webkit-box-shadow: inset 0px 0px 20px 4px rgba(255,255,255,1);
     -moz-box-shadow: inset 0px 0px 20px 4px rgba(255,255,255,1);
     box-shadow: inset 0px 0px 20px 4px rgba(255,255,255,1);
-    z-index: 1;
+    z-index: 2;
 }
