@@ -8,35 +8,43 @@ import NextConteiner from "./nextContainer.jsx";
 import "../css/DataPage.css";
 // Constantes
 import "../conts.js";
-export default function DataPage(data){
+export default function DataPage({data, func}){
+    var weather = data;
+    var dataVideoPath =`../../resources/overlays/cloud.mp4`
+    var dataIconPath = `../../resources/icons/weather/${weather.list[0].weather[0].icon}.svg`;
+    var weatherTemp = weather.list[0].main.temp;
+    var feelsLike = weather.list[0].main.feels_like;
+    var maxminTemp = weather.list[0].main.temp_max + "º - " + weather.list[0].main.temp_min+"º";
+    var humidity = weather.list[0].main.humidity;
+    console.log(weather)
     // Consts para mostrar fechas
     const MESES = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
     const DIAS = ["Lunes", "Martes","Miercoles", "Jueves", "Viernes", "Sábado", "Domingo"]
     var fecha = new Date();
     var displayFecha = `${DIAS[fecha.getDay()]}, ${fecha.getDate()} ${MESES[fecha.getMonth()]} ${fecha.getFullYear()}`;
-    var displayYear = `${MESES[fecha.getMonth()]} ${fecha.getFullYear()}`
+    var displayYear = `${MESES[fecha.getMonth()]} ${fecha.getFullYear()}`;
     return(
         // Sección de datos actuales
         <div className="dataPageContainer">
             <div className="mainDataCont">
                 <div className="videCont">
                     <video autoPlay loop muted playsInline>
-                        <source src="../../resources/overlays/rain.mp4" type="video/mp4" />
+                        <source src="../../resources/overlays/cloud.mp4" type="video/mp4" />
                     </video>
                     <div className="content">
                         <div className="location">
                             <img src="../../resources/icons/interface/location.webp" alt="location" />
-                            <h1>Barcelona</h1>
+                            <h1>{weather.city.name}</h1>
                         </div>
-                        <img className="dataIcon" src="../../resources/icons/weather/09d.svg" alt="clima" />
+                        <img className="dataIcon" src={dataIconPath} alt="clima" />
                         {/* 09d.svg lluvia - 01d dia */}
                     </div>
                 </div>
                 <div className="todayData">
-                    <h1>15º</h1>
-                    <SubContentToday info={"prueba"} />
-                    <SubContentToday info={"prueba"} />
-                    <SubContentToday info={"prueba"} />
+                    <h1>{weatherTemp}º</h1>
+                    <SubContentToday info={`Sensación termica: ${feelsLike}º`} />
+                    <SubContentToday info={"Temp. max/min: "+ maxminTemp} />
+                    <SubContentToday info={"Humedad: "+humidity+"%"} />
                 </div>
                 
             </div>
@@ -48,7 +56,7 @@ export default function DataPage(data){
                         <p>{displayFecha}</p>
                     </div>
                     <div className="searchCont">
-                        <SearchInput />
+                        <SearchInput searchFunc={func}/>
                     </div>
                 </div>
                 <hr/>
