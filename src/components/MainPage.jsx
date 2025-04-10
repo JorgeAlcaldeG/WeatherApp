@@ -1,4 +1,4 @@
-
+// Pagina principal de la web, desde aquí el usuario puede hacer una busqueda inicial y se gestionan errores
 export default function MainPage(code){
     console.log(code)
     return(

@@ -18,7 +18,7 @@
     background: -webkit-linear-gradient(180deg, rgba(47,40,80,1) 50%, rgba(107,91,182,1) 100%);
     background: linear-gradient(180deg, rgba(47,40,80,1) 50%, rgba(107,91,182,1) 100%);
 }
-
+/* Sección del video */
 .videCont{
     position:relative;
     width: 100%;
@@ -39,10 +39,32 @@ video{
     mask-image: linear-gradient(black, transparent);
     z-index: 0;
 }
+.location{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+}
+.location img{
+    width: 10%;
+}
+.dataIcon{
+    /* margin: auto; */
+    width: 70%;
+}
+/* Datos actuales */
 .content{
-    position: relative; /* o absolute si querés posicionarlo más preciso */
-  z-index: 2; /* 🔑 mayor que el del video */
-  color: white;
-  text-align: center;
-  padding: 2rem;
+    position: relative;
+    z-index: 2; 
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.todayData{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
