@@ -8,9 +8,7 @@ function App() {
   return (
       <div className='appContainer'>
           <div className="shadow"></div>
-          {data["cod"] == 200 ? <DataPage data={data} />: <MainPage 
-            code={data.cod}/> 
-          }
+          {data["cod"] == 200 ? <DataPage data={data} />: <MainPage code={data.cod}/> }
       </div>
   )
 }

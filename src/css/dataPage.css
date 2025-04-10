@@ -28,7 +28,7 @@
     border-radius: 41px 0px 0px 0px;
     -webkit-border-radius: 41px 0px 0px 0px;
     -moz-border-radius: 41px 0px 0px 0px;
-    z-index: 2;
+    /* z-index: 2; */
 }
 video{
     position: absolute;
@@ -36,7 +36,7 @@ video{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    mask-image: linear-gradient(black, transparent);
+    mask-image: linear-gradient(black 50%, transparent 100%);
     z-index: 0;
 }
 .location{
@@ -67,4 +67,24 @@ video{
     display: flex;
     flex-direction: column;
     width: 100%;
+}
+
+/* Sección de otros datos */
+.subCont{
+    width: 65%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    text-align: left;
+}
+.topSection{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+}
+.dateCont{
+    width: 50%;
+}
+.searchCont{
+    width: 50%;
 }
