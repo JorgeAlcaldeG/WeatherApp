@@ -3,6 +3,7 @@
 // Importación de componentes
 import SubContentToday from "./subContentToday.jsx";
 import SearchInput from "./SearchInput.jsx";
+import NextConteiner from "./nextContainer.jsx";
 // CSS
 import "../css/DataPage.css";
 // Constantes
@@ -44,12 +45,20 @@ export default function DataPage(data){
                 <div className="topSection">
                     <div className="dateCont">
                         <h1>{displayYear}</h1>
-                        <h3>{displayFecha}</h3>
+                        <p>{displayFecha}</p>
                     </div>
                     <div className="searchCont">
                         <SearchInput />
                     </div>
                 </div>
+                <hr/>
+                {/* Sección proximos dias */}
+                <div className="nextDayCont">
+                    <NextConteiner />
+                    <NextConteiner /><NextConteiner /><NextConteiner /><NextConteiner />
+                </div>
+                <hr />
+                <p>Últimas búsquedas</p>
             </div>
         </div>
     )

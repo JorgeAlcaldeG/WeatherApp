@@ -1,0 +1,19 @@
+.nextCont{
+    border-style: solid;
+    border-color: white;
+    border-radius: 80px;
+    border-width: 4px;
+    padding: 2%;
+    padding-top: 0%;
+    width: 13%;
+    text-align: center;
+    margin: 1%;
+
+    background: rgb(47,40,80);
+    background: -moz-linear-gradient(180deg, rgba(47,40,80,1) 50%, rgba(107,91,182,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(47,40,80,1) 50%, rgba(107,91,182,1) 100%);
+    background: linear-gradient(180deg, rgba(47,40,80,1) 50%, rgba(107,91,182,1) 100%);
+}
+.nextIcon{
+    width: 100%;
+}

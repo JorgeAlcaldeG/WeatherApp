@@ -8,3 +8,8 @@ body{
     background-image: url("../../resources/bg.jpg");
     background-size: cover;
 }
+input::placeholder {
+    font-weight: bold;
+    opacity: 0.5;
+    color: black;
+  }

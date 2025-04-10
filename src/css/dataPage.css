@@ -75,6 +75,7 @@ video{
     padding-left: 2.5%;
     padding-right: 2.5%;
     text-align: left;
+    align-items: baseline;
 }
 .topSection{
     display: flex;
@@ -87,4 +88,12 @@ video{
 }
 .searchCont{
     width: 50%;
+}
+/* Sección siguentes dias */
+.nextDayCont{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
 }
