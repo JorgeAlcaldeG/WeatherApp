@@ -10,11 +10,13 @@ import "../css/DataPage.css";
 import "../conts.js";
 export default function DataPage({data, func}){
     var weather = data;
-    var dataVideoPath =`../../resources/overlays/cloud.mp4`
+    var weatherIcon = weather.list[0].weather[0].icon
+    weatherIcon = weatherIcon.substring(0,2);
+    var dataVideoPath =`../../resources/overlays/${weatherIcon}.mp4`
     var dataIconPath = `../../resources/icons/weather/${weather.list[0].weather[0].icon}.svg`;
     var weatherTemp = weather.list[0].main.temp;
     var feelsLike = weather.list[0].main.feels_like;
-    var maxminTemp = weather.list[0].main.temp_max + "º - " + weather.list[0].main.temp_min+"º";
+    var maxminTemp = weather.list[0].main.temp_max + "º / " + weather.list[0].main.temp_min+"º";
     var humidity = weather.list[0].main.humidity;
     console.log(weather)
     // Consts para mostrar fechas
@@ -28,8 +30,8 @@ export default function DataPage({data, func}){
         <div className="dataPageContainer">
             <div className="mainDataCont">
                 <div className="videCont">
-                    <video autoPlay loop muted playsInline>
-                        <source src="../../resources/overlays/cloud.mp4" type="video/mp4" />
+                    <video autoPlay loop muted playsInline key={dataVideoPath}>
+                        <source src={dataVideoPath} type="video/mp4" />
                     </video>
                     <div className="content">
                         <div className="location">
