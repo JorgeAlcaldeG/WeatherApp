@@ -21,10 +21,28 @@ export default function DataPage({data, func}){
     console.log(weather)
     // Consts para mostrar fechas
     const MESES = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-    const DIAS = ["Lunes", "Martes","Miercoles", "Jueves", "Viernes", "Sábado", "Domingo"]
+    const DIAS = ["Domingo","Lunes", "Martes","Miércoles", "Jueves", "Viernes", "Sábado"]
     var fecha = new Date();
     var displayFecha = `${DIAS[fecha.getDay()]}, ${fecha.getDate()} ${MESES[fecha.getMonth()]} ${fecha.getFullYear()}`;
     var displayYear = `${MESES[fecha.getMonth()]} ${fecha.getFullYear()}`;
+    // Siguientes dias
+    var datosDias = {}
+    var today = `${fecha.getFullYear()}-${fecha.getMonth()}-${fecha.getDate()}`
+    var numDias = 0;
+    weather.list.forEach(item => {
+        if(numDias != 4){
+            var fecha = item.dt_txt.split(" ")[0];
+            if(!datosDias[fecha]){
+                datosDias[fecha] = {
+                    temps: [],
+                    condicion:[],
+                };
+                numDias++;
+            }
+            datosDias[fecha].temps.push(item.main.temp)
+            datosDias[fecha].condicion.push(item.weather[0].icon)
+        }
+    });
     return(
         // Sección de datos actuales
         <div className="dataPageContainer">
@@ -64,8 +82,12 @@ export default function DataPage({data, func}){
                 <hr/>
                 {/* Sección proximos dias */}
                 <div className="nextDayCont">
-                    <NextConteiner />
-                    <NextConteiner /><NextConteiner /><NextConteiner /><NextConteiner />
+                    
+                    {
+                        Object.entries(datosDias).map(data => {
+                            return(<NextConteiner data={data}/>)
+                        })
+                    }
                 </div>
                 <hr />
                 <p>Últimas búsquedas</p>

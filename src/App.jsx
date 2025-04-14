@@ -11,6 +11,7 @@ function App() {
     event.preventDefault();
     var info = event.target[0].value
     setSearch(info);
+    event.target[0].value = "";
   }
   useEffect(()=>{
     if(search != ""){
