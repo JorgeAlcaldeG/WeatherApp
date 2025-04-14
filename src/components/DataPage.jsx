@@ -18,7 +18,6 @@ export default function DataPage({data, func}){
     var feelsLike = weather.list[0].main.feels_like;
     var maxminTemp = weather.list[0].main.temp_max + "º / " + weather.list[0].main.temp_min+"º";
     var humidity = weather.list[0].main.humidity;
-    console.log(weather)
     // Consts para mostrar fechas
     const MESES = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
     const DIAS = ["Domingo","Lunes", "Martes","Miércoles", "Jueves", "Viernes", "Sábado"]
@@ -36,11 +35,15 @@ export default function DataPage({data, func}){
                 datosDias[fecha] = {
                     temps: [],
                     condicion:[],
+                    key:[]
                 };
                 numDias++;
             }
             datosDias[fecha].temps.push(item.main.temp)
             datosDias[fecha].condicion.push(item.weather[0].icon)
+            if(datosDias[fecha].key.length == 0){
+                datosDias[fecha].key.push(`${weather.city.name}/${fecha}`)
+            }
         }
     });
     return(
@@ -85,7 +88,7 @@ export default function DataPage({data, func}){
                     
                     {
                         Object.entries(datosDias).map(data => {
-                            return(<NextConteiner data={data}/>)
+                            return(<NextConteiner data={data} key={data[1].key[0]}/>)
                         })
                     }
                 </div>
