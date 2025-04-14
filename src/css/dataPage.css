@@ -97,3 +97,11 @@ video{
     flex-wrap: wrap;
 
 }
+
+.lastsrcCont{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 1%;
+}

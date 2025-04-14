@@ -1,15 +1,16 @@
 // Sección de datos, solo se accede si la api devuelve un codigo 200 y hay datos para mostrar
-
 // Importación de componentes
 import SubContentToday from "./subContentToday.jsx";
 import SearchInput from "./SearchInput.jsx";
 import NextConteiner from "./nextContainer.jsx";
+import LastSearch from "./LastSearch.jsx";
 // CSS
 import "../css/DataPage.css";
 // Constantes
 import "../conts.js";
-export default function DataPage({data, func}){
+export default function DataPage({data, func, lastsrc, lastHandler}){
     var weather = data;
+    // console.log(lastHandler)
     var weatherIcon = weather.list[0].weather[0].icon
     weatherIcon = weatherIcon.substring(0,2);
     var dataVideoPath =`../../resources/overlays/${weatherIcon}.mp4`
@@ -18,6 +19,7 @@ export default function DataPage({data, func}){
     var feelsLike = weather.list[0].main.feels_like;
     var maxminTemp = weather.list[0].main.temp_max + "º / " + weather.list[0].main.temp_min+"º";
     var humidity = weather.list[0].main.humidity;
+    var statusClima = weather.list[0].weather[0].description;
     // Consts para mostrar fechas
     const MESES = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
     const DIAS = ["Domingo","Lunes", "Martes","Miércoles", "Jueves", "Viernes", "Sábado"]
@@ -63,6 +65,7 @@ export default function DataPage({data, func}){
                         {/* 09d.svg lluvia - 01d dia */}
                     </div>
                 </div>
+                <h2>{statusClima}</h2>
                 <div className="todayData">
                     <h1>{weatherTemp}º</h1>
                     <SubContentToday info={`Sensación termica: ${feelsLike}º`} />
@@ -94,6 +97,11 @@ export default function DataPage({data, func}){
                 </div>
                 <hr />
                 <p>Últimas búsquedas</p>
+                <div className="lastsrcCont">
+                    {lastsrc.map(src =>{
+                        return(<LastSearch data={src} key={src.nom} onClickfunc={lastHandler}/>)
+                    })}
+                </div>
             </div>
         </div>
     )
