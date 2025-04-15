@@ -14,6 +14,11 @@ function App() {
     setSearch(info);
     event.target[0].value = "";
   }
+  function presetData(){
+    var info = event.target.innerText
+    console.log(info)
+    setSearch(info)
+  }
   useEffect(()=>{
     if(search != ""){
       var link = URL.APIURL+search;
@@ -38,7 +43,7 @@ function App() {
   return (
       <div className='appContainer'>
           <div className="shadow"></div>
-          {data["cod"] == 200 ? <DataPage data={data} func={searchData} lastsrc={lastSrc} lastHandler={lastHandler} />: <MainPage code={data.cod} func={searchData}/> }
+          {data["cod"] == 200 ? <DataPage data={data} func={searchData} lastsrc={lastSrc} lastHandler={lastHandler} />: <MainPage code={data.cod} func={searchData} presetFunc={presetData}/> }
       </div>
   )
 }

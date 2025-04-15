@@ -9,6 +9,17 @@
     float:left;
     height: 100%;
 }
+.searcherMain{
+    width: 100%;
+    padding-top: 0%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    float:left;
+    height: 100%;
+}
 .searchIcon{
     width: 15%;
     background-color: white;
@@ -27,4 +38,12 @@ input{
     border-radius: 0px 5px 5px 0px;
     width: 100%;
     color: black;
+}
+input::placeholder {
+    font-weight: bold;
+    /* opacity: 0.5; */
+    color: black;
+}
+input[type=text]:focus{
+    border-width: 0px;
 }

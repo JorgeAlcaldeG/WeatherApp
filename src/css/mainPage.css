@@ -1,0 +1,20 @@
+.mainContainer{
+    margin-top: 5%;
+}
+.mainContainer h1{
+    font-size: 50px;
+    margin-bottom: .5%;
+}
+.mainContainer .cursivaTxt{
+    margin-top: 0%;
+    font-size: 13px;
+}
+.presets{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
+    width: 20%;
+    margin: auto;
+    background-color: aqua;
+}
