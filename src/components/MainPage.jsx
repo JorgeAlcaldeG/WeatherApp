@@ -9,16 +9,18 @@ export default function MainPage({code, func, presetFunc}){
             <p className="cursivaTxt">Descubre el clima de cualquier rincón del mundo</p>
             <p>Prueba a buscar por ciudad o por codigo postal</p>
             <SearchInput searchFunc={func} style={'main'}/>
-            <p>Ubicaciones destacadas</p>
-            <div className="presets">
-                <PresetSrc text={"Barcelona"} presetFunc={presetFunc} />
-                <PresetSrc text={"Madrid"} presetFunc={presetFunc} />
-                <PresetSrc text={"Alaska"} presetFunc={presetFunc} />
-                <PresetSrc text={"33200"} presetFunc={presetFunc}  />
-                <PresetSrc text={"Tokio"} presetFunc={presetFunc} />
-                <PresetSrc text={"Seúl"} presetFunc={presetFunc} />
-                <PresetSrc text={"Monterrey"} presetFunc={presetFunc} />
-                {/* <PresetSrc text={"Lima"} presetFunc={presetFunc}  /> */}
+            <div className="ubiContainer">
+                <p>Ubicaciones destacadas</p>
+                <div className="presets">
+                    <PresetSrc text={"Barcelona"} presetFunc={presetFunc} />
+                    <PresetSrc text={"Madrid"} presetFunc={presetFunc} />
+                    <PresetSrc text={"Alaska"} presetFunc={presetFunc} />
+                    <PresetSrc text={"33200"} presetFunc={presetFunc}  />
+                    <PresetSrc text={"Tokio"} presetFunc={presetFunc} />
+                    <PresetSrc text={"Seúl"} presetFunc={presetFunc} />
+                    <PresetSrc text={"Monterrey"} presetFunc={presetFunc} />
+                    {/* <PresetSrc text={"Lima"} presetFunc={presetFunc}  /> */}
+                </div>
             </div>
         </div>
     )

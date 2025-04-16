@@ -8,6 +8,9 @@ body{
     background-image: url("../../resources/bg.jpg");
     background-size: cover;
 }
+textarea:focus, input:focus{
+    outline: none;
+}
 .cursivaTxt{
     font-style: italic;
 }
