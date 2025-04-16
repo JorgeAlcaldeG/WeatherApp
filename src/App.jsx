@@ -16,7 +16,6 @@ function App() {
   }
   function presetData(){
     var info = event.target.innerText
-    console.log(info)
     setSearch(info)
   }
   useEffect(()=>{

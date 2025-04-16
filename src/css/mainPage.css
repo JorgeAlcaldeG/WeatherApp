@@ -13,6 +13,11 @@
     width: 100%;
     margin-top: 5%;
 }
+.codeError{
+    margin-top: 0%;
+    font-style: italic;
+    font-size: 13px;
+}
 .presets{
     display: flex;
     flex-wrap: wrap;
