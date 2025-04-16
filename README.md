@@ -16,6 +16,7 @@ This project is a work in progress of a weather app developed in React connected
 - Loading data from OpenWeatherMap API.
 - Save last cities searched by the users.
 - Current weather section change animated weather conditions acorrding with the weather at the moment.
+- User's last searches section.
 
 ## Base design (figma)
 ### Main section
@@ -30,10 +31,14 @@ This project is a work in progress of a weather app developed in React connected
 ## Screenshots (Work in progress)
 
 ### Main section
-![image](https://github.com/user-attachments/assets/4756b7c2-7554-4b78-836b-2b90e1831204)
+![image](https://github.com/user-attachments/assets/92b175b4-9edc-4e1a-9e23-a63ed3150062)
+
+### Data section
+![image](https://github.com/user-attachments/assets/a0cba98d-698b-4deb-bc1d-ff2742bff1ea)
+
 
 ### Weather conditions changes
 
-[webPreview.webm](https://github.com/user-attachments/assets/577a36e3-c05e-4b00-b992-dded4337f892)
+https://github.com/user-attachments/assets/c0f50310-bdf5-4b33-a054-89916b3e7f42
 
 
