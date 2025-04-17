@@ -48,6 +48,7 @@ export default function DataPage({data, func, lastsrc, lastHandler}){
             }
         }
     });
+
     return(
         // Sección de datos actuales
         <div className="dataPageContainer">
@@ -104,5 +105,6 @@ export default function DataPage({data, func, lastsrc, lastHandler}){
                 </div>
             </div>
         </div>
+
     )
 }
