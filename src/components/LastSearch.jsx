@@ -8,7 +8,7 @@ export default function LastSearch({data, onClickfunc}){
                 <h3>{data.temp}º</h3>
             </div>
             <div className="srcIcon">
-                <img src={dataIconPath} />
+                <img src={dataIconPath} className="lastIcon"/>
             </div>
         </div>
     )

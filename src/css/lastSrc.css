@@ -20,3 +20,14 @@
 .srcIcon{
     width: 50%;
 }
+
+@media (max-aspect-ratio: 1/1) {
+    .lastSrc{
+        align-items:stretch;
+        width: 50%;
+        min-width: 50%;
+    }
+    .lastIcon{
+        width: 100%;
+    }
+}

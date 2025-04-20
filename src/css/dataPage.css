@@ -131,5 +131,37 @@ video{
     }
     .subCont{
         width: 100%;
+        padding: 0%;
+        margin: 0%;
+    }
+    .topSection{
+        flex-direction: column;
+    }
+    .dateCont{
+        width: 100%;
+        text-align: center;
+    }
+    .dateCont h1{
+        margin-bottom: 0;
+    }
+    .dateCont p{
+        margin-top: 0;
+    }
+    .searchCont{
+        width: 100%;
+    }
+    .nextDayCont{
+        margin: 0%;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+    .lastsrcCont{
+        margin: 0%;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
     }
 }
