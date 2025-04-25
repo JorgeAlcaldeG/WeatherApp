@@ -28,7 +28,7 @@ This project is a work in progress of a weather app developed in React connected
 *If you wanna see with more detail the design check the link below.*
 [Link to figma](https://www.figma.com/design/pSgGVEahi9NC4sHNLCRxDw/WeatherAPP?node-id=0-1&t=gGNITcmUsW9A7Jmk-1)
 
-## Screenshots (Work in progress)
+## Screenshots
 
 ### Main section
 ![image](https://github.com/user-attachments/assets/92b175b4-9edc-4e1a-9e23-a63ed3150062)
