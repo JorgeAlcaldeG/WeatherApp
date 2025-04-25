@@ -1,6 +1,6 @@
 # WeatherApp
  
-This project is a work in progress of a weather app developed in React connected to OpenWeatherMap API, allowing users to search a city or country and get current and next days climate data.
+This project is a weather app developed in React connected to OpenWeatherMap API, allowing users to search a city or country and get current and next days climate data.
 
 ## Technology used
 - React
