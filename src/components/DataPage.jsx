@@ -5,7 +5,7 @@ import SearchInput from "./SearchInput.jsx";
 import NextConteiner from "./NextContainer.jsx";
 import LastSearch from "./LastSearch.jsx";
 // CSS
-import "../css/DataPage.css";
+import "../css/dataPage.css";
 // Constantes
 import "../conts.js";
 export default function DataPage({data, func, lastsrc, lastHandler}){
