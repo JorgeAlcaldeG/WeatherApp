@@ -13,8 +13,8 @@ export default function DataPage({data, func, lastsrc, lastHandler}){
     // console.log(lastHandler)
     var weatherIcon = weather.list[0].weather[0].icon
     weatherIcon = weatherIcon.substring(0,2);
-    var dataVideoPath =`../../resources/overlays/${weatherIcon}.mp4`
-    var dataIconPath = `../../resources/icons/weather/${weather.list[0].weather[0].icon}.svg`;
+    var dataVideoPath =`/resources/overlays/${weatherIcon}.mp4`
+    var dataIconPath = `/resources/icons/weather/${weather.list[0].weather[0].icon}.svg`;
     var weatherTemp = weather.list[0].main.temp;
     var feelsLike = weather.list[0].main.feels_like;
     var maxminTemp = weather.list[0].main.temp_max + "º / " + weather.list[0].main.temp_min+"º";

@@ -8,7 +8,7 @@ export default function SearchInput({searchFunc, style}){
     return(
         <div className={contStyle}>
             <form onSubmit={searchFunc}>
-                <input placeholder="Búsqueda por ciudad" className="searchIcon" type="image" src="../../resources/icons/interface/src.svg" alt="" />
+                <input placeholder="Búsqueda por ciudad" className="searchIcon" type="image" src="/resources/icons/interface/src.svg" alt="" />
                 <input className={style} type="text" name="search"/>
             </form>
         </div>

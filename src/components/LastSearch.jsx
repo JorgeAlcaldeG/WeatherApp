@@ -1,6 +1,6 @@
 import "../css/lastSrc.css"
 export default function LastSearch({data, onClickfunc}){
-    var dataIconPath = `../../resources/icons/weather/${data.icon}.svg`;
+    var dataIconPath = `/resources/icons/weather/${data.icon}.svg`;
     return(
         <div className="lastSrc" onClick={()=>{onClickfunc(data.nom)}}>
             <div className="srcInfo">
