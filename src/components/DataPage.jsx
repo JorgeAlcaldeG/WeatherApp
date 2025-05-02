@@ -1,8 +1,8 @@
 // Sección de datos, solo se accede si la api devuelve un codigo 200 y hay datos para mostrar
 // Importación de componentes
-import SubContentToday from "./subContentToday.jsx";
+import SubContentToday from "./SubContentToday.jsx";
 import SearchInput from "./SearchInput.jsx";
-import NextConteiner from "./nextContainer.jsx";
+import NextConteiner from "./NextContainer.jsx";
 import LastSearch from "./LastSearch.jsx";
 // CSS
 import "../css/DataPage.css";
