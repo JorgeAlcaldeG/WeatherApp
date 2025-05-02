@@ -2,6 +2,10 @@
  
 This project is a weather app developed in React connected to OpenWeatherMap API, allowing users to search a city or country and get current and next days climate data.
 
+### Live Preview
+
+Check out the live version of the app: [Live site](https://weather-app-two-gamma-53.vercel.app/)
+
 ## Technology used
 - React
 - JavaScript
